@@ -3,26 +3,28 @@ import { DarkModetoggler } from "@/components/DarkModeToggler";
 import { Github, Linkedin, TwitterIcon } from "lucide-react";
 import Image from "next/image";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className=" h-screen flex items-center justify-center font-sans text-sm dark:bg-black">
-      <div className="bg-neutral-100 dark:bg-black w-2xl h-screen p-5">
+    <div className=" min-h-screen flex items-center justify-center font-sans text-sm dark:bg-black">
+      <div className="bg-neutral-100 dark:bg-black sm:w-2xl w-2xl  p-5">
         <div>
           <div className="flex  justify-between ">
             <Image
               className="border  rounded-2xl"
               src="/photo2.jpg"
               alt="Picture of the author"
-              width={150}
-              height={150}
+              width={120}
+              height={120}
             />
             <div className="">
               <div className="relative sm:right-10 ">
-                <div className="flex sm:gap-5 gap-2 items-center">
-                  <TwitterIcon className="text-neutral-500 dark:text-white" />
-                  <Github className="text-neutral-500 dark:text-white" />
-                  <Linkedin className="text-neutral-500 dark:text-white" />
+                <div className="flex sm:gap-10 gap-2 items-center">
+
+                  <Link href={"https://x.com/caps_raunak"} target="_blank"> <TwitterIcon className="text-neutral-500 dark:text-white" /> </Link>
+                  <Link href={"https://github.com/RaunaK-cap"} target="_blank">  <Github className="text-neutral-500 dark:text-white" /> </Link>
+                  <Link href={"https://www.linkedin.com/in/raunak-kr-690185308/"} target="_blank">   <Linkedin className="text-neutral-500 dark:text-white" /> </Link>
                   <DarkModetoggler />
                 </div>
               </div>
@@ -35,7 +37,7 @@ export default function Home() {
           </p>
           <br />
           <div>
-            <p className="text-neutral-500 dark:text-neutral-400 px-2">
+            <p className="text-neutral-500 dark:text-neutral-400 px-2 ">
               {" "}
               I'm a Full Stack & devOps Engineer , I love to Build Unique things
               from scratch to upto production level{" "}
@@ -48,7 +50,7 @@ export default function Home() {
             <TabsList className="w-full">
               <TabsTrigger value="account">Projects</TabsTrigger>
               <TabsTrigger value="password">Experience</TabsTrigger>
-              <TabsTrigger value="contribution">Contribution</TabsTrigger>
+              <TabsTrigger value="contribution">Skills</TabsTrigger>
              
             </TabsList>
             <TabsContent value="account">
