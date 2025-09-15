@@ -20,7 +20,7 @@ export default function Home() {
             />
             <div className="">
               <div className="relative sm:right-10 ">
-                <div className="flex sm:gap-10 gap-2 items-center">
+                <div className="flex sm:gap-10 gap-4 items-center">
 
                   <Link href={"https://x.com/caps_raunak"} target="_blank"> <TwitterIcon className="text-neutral-500 dark:text-white" /> </Link>
                   <Link href={"https://github.com/RaunaK-cap"} target="_blank">  <Github className="text-neutral-500 dark:text-white" /> </Link>
