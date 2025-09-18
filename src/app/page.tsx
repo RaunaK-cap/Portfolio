@@ -4,6 +4,7 @@ import { Github, Linkedin, TwitterIcon } from "lucide-react";
 import Image from "next/image";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Link from "next/link";
+import { Badge } from "@/components/ui/badge";
 
 export default function Home() {
   return (
@@ -22,9 +23,9 @@ export default function Home() {
               <div className="relative sm:right-10 ">
                 <div className="flex sm:gap-10 gap-4 items-center">
 
-                  <Link href={"https://x.com/caps_raunak"} target="_blank"> <TwitterIcon className="text-neutral-500 dark:text-white" /> </Link>
-                  <Link href={"https://github.com/RaunaK-cap"} target="_blank">  <Github className="text-neutral-500 dark:text-white" /> </Link>
-                  <Link href={"https://www.linkedin.com/in/raunak-kr-690185308/"} target="_blank">   <Linkedin className="text-neutral-500 dark:text-white" /> </Link>
+                  <Link href={"https://x.com/caps_raunak"} target="_blank"> <TwitterIcon className="text-neutral-500 dark:text-white hover:scale-150 hover:transition-all size-6" /> </Link>
+                  <Link href={"https://github.com/RaunaK-cap"} target="_blank">  <Github className="text-neutral-500 dark:text-white hover:scale-150 hover:transition-all size-6" /> </Link>
+                  <Link href={"https://www.linkedin.com/in/raunak-kr-690185308/"} target="_blank">   <Linkedin className="text-neutral-500 dark:text-white hover:scale-150 size-6 hover:transition-all" /> </Link>
                   <DarkModetoggler />
                 </div>
               </div>
@@ -48,7 +49,7 @@ export default function Home() {
         <div className="mt-5">
           <Tabs defaultValue="Content" className="w-full h-[40rem] ">
             <TabsList className="w-full">
-              <TabsTrigger value="account">Projects</TabsTrigger>
+              <TabsTrigger value="account">Projects <Badge className="rounded-full bg-red-700 dark:text-white"> 5+</Badge></TabsTrigger>
               <TabsTrigger value="password">Experience</TabsTrigger>
               <TabsTrigger value="contribution">Skills</TabsTrigger>
              
@@ -64,10 +65,20 @@ export default function Home() {
             </TabsContent>
           </Tabs>
         </div>
-        <footer className="border border-t border-neutral-100 p-2 rounded-lg">
-          <div className="flex items-center justify-between h-10">
-              <p> @Copyright.. </p>
-              <p> Contact with me </p>
+        <footer className="border border-neutral-200 dark:border-neutral-900 p-1 rounded-lg">
+          <div className="flex items-center justify-between  p-2">
+              <p className="text-neutral-400"> @RaunaK.. </p>
+              <div className="flex items-center sm:gap-8 gap-4">
+              <p> <Badge>  Contact with me </Badge> </p>
+              <div className="flex sm:gap-10 gap-5 items-center ">
+
+                  <Link href={"https://x.com/caps_raunak"} target="_blank"> <TwitterIcon className="text-neutral-500 dark:text-white size-4 hover:scale-150 hover:transition-all" /> </Link>
+                  <Link href={"https://github.com/RaunaK-cap"} target="_blank">  <Github className="text-neutral-500 dark:text-white size-4 hover:scale-150 hover:transition-all" /> </Link>
+                  <Link href={"https://www.linkedin.com/in/raunak-kr-690185308/"} target="_blank">   <Linkedin className="text-neutral-500 dark:text-white size-4 hover:scale-150 hover:transition-all" /> </Link>
+                  
+                </div>
+
+              </div>
           </div>
         </footer>
       </div>
